@@ -1,4 +1,5 @@
 from airflow.sdk import dag, task
+
 from datetime import datetime
 
 
@@ -14,10 +15,11 @@ def load_weather():
     dag_id="weather_pipeline",
     start_date=datetime(2026, 1, 1),
     schedule="@hourly",
-    catchup=False,
-    tags=["weather"]
+    catchup=False
 )
 def weather_pipeline():
+
     load_weather()
+
 
 weather_pipeline()
