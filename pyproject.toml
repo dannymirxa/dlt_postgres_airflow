@@ -1,0 +1,12 @@
+[project]
+name = "dlt-postgres-airflow"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "apache-airflow>=3.3.2",
+    "dlt[hub]>=1.31.0",
+    "psycopg2-binary>=2.9.13",
+    "requests>=2.34.2",
+]
